@@ -1,1 +1,0 @@
-### This project will contain the first steps to understand the laravel structure.
