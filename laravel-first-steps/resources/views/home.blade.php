@@ -16,9 +16,15 @@
                 <p class="pr-5"><strong>212</strong> following</p>
             </div>
             <div class="d-flex flex-column">
-                <div class='pt-4 font-weight-bold'>freeCodeCamp.org</div>
-                <div>We're a global community of millions of people learning to code together. We're an open source, donor-supported, 501(c)(3) nonprofit.</div>
-                <a href="https://www.freecodecamp.org/">www.freecodecamp.org</a>
+                <div class='pt-4 font-weight-bold'>{{ $user->profile->title }}</div>
+                <div>{{ $user->profile->bio_description }}</div>
+
+                @if ($user->profile->url === null)
+                    <p>This user has no website</p>
+                @else
+                    <a href="https://www.freecodecamp.org/">{{ $user->profile->url }}</a>
+                @endif
+
             </div>
         </div>
 
