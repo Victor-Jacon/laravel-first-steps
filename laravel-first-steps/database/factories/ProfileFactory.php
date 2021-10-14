@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Profile;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
 
 class ProfileFactory extends Factory
 {
@@ -22,7 +23,10 @@ class ProfileFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id' => User::factory(),
+            'title' => $this->faker->sentence(40, true),
+            'bio_description' => $this->faker->text(),
+            'url' => $this->faker->url(),
         ];
     }
 }
