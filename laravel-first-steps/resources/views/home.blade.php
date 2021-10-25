@@ -9,6 +9,7 @@
         <div class="col-9 pt-5">
             <div>
                 <h1> {{ $user->username }} </h1>
+                <a href="#">Add New Post</a>
             </div>
             <div class="d-flex">
                 <p class="pr-5"><strong>153</strong> posts</p>
@@ -22,7 +23,7 @@
                 @if ($user->profile->url === null)
                     <p>This user has no website</p>
                 @else
-                    <a href="https://www.freecodecamp.org/">{{ $user->profile->url }}</a>
+                    <a href="{{ $user->profile->url }}">{{ $user->profile->url }}</a>
                 @endif
 
             </div>
