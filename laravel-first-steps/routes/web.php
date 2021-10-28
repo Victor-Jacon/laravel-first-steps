@@ -19,4 +19,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// [Controller 1] O que vier depois de profile/{aqui!} será chamado de user.
+// Este valor "user" é passado para o ProfilesController, no método index.
 Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show');
