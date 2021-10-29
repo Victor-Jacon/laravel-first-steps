@@ -7,7 +7,7 @@
             <img class="img-fluid rounded-circle" src="{{ asset('assets/freeCodeCampProfile.jpg') }}" alt="">
         </div>
         <div class="col-9 pt-5">
-            <div>
+            <div class="d-flex justify-content-between align-items-baseline">
                 <!--[Controller 6] In this page we changed all static data to dynamic data coming from our db -->
                 <h1> {{ $user->username }} </h1>
                 <a href="#">Add New Post</a>

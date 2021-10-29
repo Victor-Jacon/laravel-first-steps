@@ -46,4 +46,10 @@ class User extends Authenticatable
     public function profile() {
         return $this->hasOne(Profile::class);
     }
+
+    // [Relationship Post 2] As 1 user can have multiple posts: the function name is posts PLURAL. Not post.
+    // 1 user: many posts. So it is a hasMany relationship.
+    public function posts() {
+        return $this->hasMany(Post::class);
+    }
 }

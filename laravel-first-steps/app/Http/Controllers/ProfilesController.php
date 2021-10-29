@@ -15,7 +15,7 @@ class ProfilesController extends Controller
 
         // [Controller 3] Se eu passo /profile/1 significa que estou buscando o usuário que tenha o ID = 1.
         // Eu salvo o resultado desta consulta ao banco na variavel user
-        $user = User::find($user);
+        $user = User::findOrFail($user);
 
         // [Controller  4] O laravel aceita somente arrays como parâmetro. Não dá pra passar um objeto direto.
         // Colocamos dentro de uma variavel $user os valores que buscamos no banco.
